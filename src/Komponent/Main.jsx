@@ -34,8 +34,6 @@ export default class Main extends React.Component {
           getApi={this.getApi}
           news={this.state.news}
           search={this.state.search}
-          category={this.state.category}
-          country={this.state.country}
         />
         <Footer />
       </div>
