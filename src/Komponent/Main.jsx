@@ -9,20 +9,13 @@ export default class Main extends React.Component {
     super(props);
 
     this.state = {
-      news: [],
       search: "",
     };
 
-    this.getApi = this.getApi.bind(this);
     this.searchNews = this.searchNews.bind(this);
   }
 
-  getApi = (e) => {
-    this.setState({ news: e });
-  };
-
   searchNews = (value) => {
-    console.log(value);
     this.setState({ search: value });
   };
 
@@ -31,8 +24,6 @@ export default class Main extends React.Component {
       <div>
         <Header searchNews={this.searchNews} />
         <Api
-          getApi={this.getApi}
-          news={this.state.news}
           search={this.state.search}
         />
         <Footer />
