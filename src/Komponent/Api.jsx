@@ -22,7 +22,7 @@ componentDidMount(){
 }
 
 componentDidUpdate(prevProps){
-  console.log(prevProps);
+  
   if(this.props.search !== prevProps.search)
   axios.get(`https://newsapi.org/v2/${!this.props.search?'top-headlines?country=us': `everything?q=${this.props.search}`}&pageSize=5&apiKey=55bfc216f16a4f40bce62049a80c1140`)
   .then((res) => {
